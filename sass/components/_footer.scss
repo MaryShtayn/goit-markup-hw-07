@@ -43,7 +43,7 @@
   font-size: 14px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 }
 .address__link.link:hover,
 .address__link.link:focus {
@@ -73,8 +73,9 @@
 .footer__socials .socials__link--dark {
   background-color: var(--icons-footer-bgd-clr);
   color: var(--main-bgd-clr);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(background-color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 }
+
 .footer__socials .socials__link--dark:hover,
 .footer__socials .socials__link--dark:focus {
   background-color: var(--accent-clr);
@@ -111,7 +112,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: var(--accent-bgd-clr);
   background-color: #2f303a;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(null, border-color, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
   outline: transparent;
 }
 
@@ -138,8 +139,7 @@
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(background-color, border-color, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 }
 
 .subscribe__btn:hover,

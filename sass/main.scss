@@ -2,6 +2,7 @@
 @import './utils/vars';
 @import './utils/v-h';
 @import './utils/placeholder';
+@import './utils/mixin';
 
 @import './components/header';
 @import './components/hero';
@@ -13,6 +14,6 @@
 @import './components/footer';
 
 // Modal
-@import './components/modal';
-@import './components/register-form';
-@import './components/checkbox';
+@import './components/modal/modal';
+@import './components/modal/register-form';
+@import './components/modal/checkbox';
