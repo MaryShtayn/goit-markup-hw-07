@@ -3,10 +3,9 @@
   letter-spacing: 0.03em;
 }
 .features__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include list(flex, 30px, row, wrap);
 }
+
 .features__item {
   width: 270px;
 }

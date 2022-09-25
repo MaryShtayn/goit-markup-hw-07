@@ -12,10 +12,10 @@
   letter-spacing: 0.03em;
 }
 .clients__list {
-  display: flex;
+  @include list(flex, 30px, row, null);
   align-items: center;
-  gap: 30px;
 }
+
 .clients__item {
   width: 170px;
   height: 92px;
@@ -30,12 +30,15 @@
   border: 1px solid var(--icons-clr);
   color: var(--icons-clr);
   @include transition(border-color, color, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
- }
+}
 .clients__icon {
   fill: currentColor;
 }
-.clients__link:hover,
-.clients__link:focus {
-  border-color: var(--accent-clr);
-  color: var(--btn-accent-bg-cl);
+
+.clients__link {
+  &:hover,
+  &:focus {
+    border-color: var(--accent-clr);
+    color: var(--btn-accent-bg-cl);
+  }
 }

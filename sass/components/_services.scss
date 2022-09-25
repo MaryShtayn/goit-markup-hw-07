@@ -10,10 +10,10 @@
   letter-spacing: 0.03em;
 }
 .services__list {
-  display: flex;
   justify-content: center;
-  gap: 30px;
+  @include list(flex, 30px, row, null);
 }
+
 .services__item {
   position: relative;
 }
