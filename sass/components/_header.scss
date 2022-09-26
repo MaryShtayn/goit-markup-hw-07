@@ -16,41 +16,39 @@
 
 .main-nav__item {
   margin-right: 50px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(var(--main-font), 14px, 500, 1.14, 0.02em, var(--main-clr));
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.main-nav__item:last-child {
-  margin-right: 0;
-}
+
 .main-nav__link {
   position: relative;
   display: block;
   padding: 32px 0;
   color: inherit;
   @include transition(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
-}
+  &:hover,
+  &:focus {
+    color: var(--accent-clr);
+    &--current {
+      color: var(--accent-clr);
+    }
+  }
 
-.main-nav__link:hover,
-.main-nav__link:focus {
-  color: var(--accent-clr);
+  &--current::after {
+    content: '';
+    position: absolute;
+    bottom: -1%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-clr);
+  }
 }
-.main-nav__link--current {
-  color: var(--accent-clr);
-}
-.main-nav__link--current::after {
-  content: '';
-  position: absolute;
-  bottom: -1%;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-clr);
-}
-
 .contacts {
   display: flex;
   margin-left: auto;
@@ -68,15 +66,11 @@
   gap: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: var(--secondary-clr);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  @include transition(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
-}
 
-.contacts__link:hover,
-.contact__link:focus {
-  color: var(--accent-clr);
+  @include font(var(--main-font), 14px, 500, 1.14, 0.02em, var(--secondary-clr));
+  @include transition(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+  &:hover,
+  &:focus {
+    color: var(--accent-clr);
+  }
 }

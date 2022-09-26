@@ -1,18 +1,27 @@
-.main-nav .logo {
+.logo {
   margin-right: 93px;
-}
-
-.header .logo {
   padding-top: 24px;
   padding-bottom: 24px;
-  font-family: var(--secondary-font);
+
   text-decoration: none;
-  color: inherit;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  letter-spacing: 0.03em;
+  @include font(var(--secondary-font), 26px, 700, calc(31 / 26), 0.03em, var(--main-clr));
 }
 .logo span {
   color: var(--accent-clr);
+}
+
+.footer__logo {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  text-decoration: none;
+  @include font(
+    var(--secondary-font),
+    26px,
+    700,
+    calc(31 / 26),
+    0.03em,
+    var(--secondary-accent-clr)
+  );
 }

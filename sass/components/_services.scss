@@ -1,13 +1,9 @@
 .services {
-  padding-bottom: 94px;
-  padding-top: 0;
+  @include section(0px, 94px, null);
 }
 .services__title {
   margin-bottom: 50px;
-  font-size: 36px;
-  line-height: calc(42.19 / 36);
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  @include font(var(--main-font), 36px, 700, calc(42.19 / 36), 0.03em, var(--main-clr));
 }
 .services__list {
   justify-content: center;
@@ -31,12 +27,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--secondary-accent-clr);
+
+  @include font(var(--main-font), 14px, 700, calc(16 / 14), 0.03em, var(--secondary-accent-clr));
   text-transform: uppercase;
   background-color: var(--secondary-bgd-clr);
   opacity: 0.8;

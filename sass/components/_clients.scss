@@ -6,11 +6,9 @@
 .clients__title {
   margin-bottom: 50px;
   text-align: center;
-  font-size: 36px;
-  line-height: 1.17;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  @include font(var(--main-font), 36px, 700, calc(42.19 / 36), 0.03em, var(--main-clr));
 }
+
 .clients__list {
   @include list(flex, 30px, row, null);
   align-items: center;

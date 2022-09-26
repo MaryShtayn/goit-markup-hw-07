@@ -4,16 +4,6 @@
   padding-bottom: 60px;
 }
 
-.footer__logo {
-  display: block;
-  color: var(--secondary-accent-clr);
-  margin-bottom: 20px;
-  font-family: var(--secondary-font);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-}
 .footer__container {
   display: flex;
   align-items: baseline;
@@ -24,29 +14,18 @@
 
 .address {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--secondary-accent-clr);
+  @include font(var(--main-font), 14px, 400, 1.7, 0.03em, var(--secondary-accent-clr));
 
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 9px;
   }
-  &__item:last-child {
-    margin-bottom: 0;
+  &__link {
+    @extend %link;
+    @include font(var(--main-font), 14px, 400, 1.7, 0.03em, var(--contacts-link-clr));
+    @include transition(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
   }
-}
-
-.address__link {
-  @extend %link;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.6);
-  @include transition(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
-  &:hover,
-  &:focus {
+  &__link:hover,
+  &__link:focus {
     color: var(--accent-clr);
   }
 }
@@ -64,22 +43,17 @@
   & .socials__icon {
     fill: currentColor;
   }
+  & .socials__link--dark:hover,
+  & .socials__link--dark:focus {
+    background-color: var(--accent-clr);
+  }
 }
 
 .footer__socials-title {
   display: block;
   margin-bottom: 20px;
-  color: var(--secondary-accent-clr);
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-}
-
-.footer__socials .socials__link--dark:hover,
-.footer__socials .socials__link--dark:focus {
-  background-color: var(--accent-clr);
+  @include font(var(--main-font), 14px, 700, calc(16 / 14), 0.03em, var(--secondary-accent-clr));
 }
 
 .footer-form {
@@ -89,12 +63,8 @@
 .footer-form__title {
   display: block;
   margin-bottom: 20px;
-  color: var(--secondary-accent-clr);
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
+  @include font(var(--main-font), 14px, 700, calc(16 / 14), 0.03em, var(--secondary-accent-clr));
 }
 
 .subscribe {
@@ -108,11 +78,11 @@
   width: 358px;
   height: 50px;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--border-clr);
   border-radius: 4px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(var(--subscribe-btn));
   color: var(--accent-bgd-clr);
-  background-color: #2f303a;
+  background-color: var(--secondary-bgd-clr);
   outline: transparent;
   @include transition(null, border-color, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 
@@ -130,16 +100,12 @@
   min-width: 216px;
   min-height: 50px;
   background-color: var(--accent-clr);
-  color: var(--secondary-accent-clr);
-  cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--subscribe-btn);
   border: none;
   border-radius: 4px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  @include font(var(--main-font), 16px, 700, calc(30 / 16), 0.06em, var(--secondary-accent-clr));
   @include transition(background-color, border-color, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
   &:hover,
   &:focus {
