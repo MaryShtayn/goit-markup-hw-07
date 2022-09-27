@@ -1,10 +1,7 @@
 .services {
   @include section(0px, 94px, null);
 }
-.services__title {
-  margin-bottom: 50px;
-  @include font(var(--main-font), 36px, 700, calc(42.19 / 36), 0.03em, var(--main-clr));
-}
+
 .services__list {
   justify-content: center;
   @include list(flex, 30px, row, null);

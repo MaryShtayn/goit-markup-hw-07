@@ -3,12 +3,6 @@
   height: 184px;
 }
 
-.clients__title {
-  margin-bottom: 50px;
-  text-align: center;
-  @include font(var(--main-font), 36px, 700, calc(42.19 / 36), 0.03em, var(--main-clr));
-}
-
 .clients__list {
   @include list(flex, 30px, row, null);
   align-items: center;

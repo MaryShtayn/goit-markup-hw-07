@@ -1,9 +1,5 @@
 .features {
   background-color: var(--secondary-accent-clr);
-
-  &__title--hidden {
-    @extend %visually-hidden;
-  }
 }
 .features__list {
   @include list(flex, 30px, row, wrap);
@@ -25,7 +21,7 @@
   border: 1px solid var(--accent-bgd-clr);
   background-color: var(--accent-bgd-clr);
 }
-.features__title {
+.features__subtitle {
   @include font(var(--main-font), 14px, 700, calc(16.41 / 14), 0.03em, var(--main-clr));
   text-transform: uppercase;
   margin-bottom: 10px;

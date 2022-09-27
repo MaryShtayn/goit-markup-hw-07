@@ -1,42 +1,14 @@
 .hero {
   text-align: center;
   @include section(200px, 200px, var(--secondary-bgd-clr));
-  &__overlay {
-    width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../images/about_the_studio/hero-bckg.jpg'),
-      url(../images/about_the_studio/hero-bckg2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  &__title {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    margin-top: 0;
-    padding: 0;
-    width: 696px;
-    text-transform: uppercase;
-    @include font(var(--main-font), 44px, 900, calc(60 / 44), 0.06em, var(--secondary-accent-clr));
-  }
-  &__btn {
-    padding: 10px 32px;
-    min-width: 216px;
-    min-height: 50px;
-    background-color: var(--accent-clr);
-    cursor: pointer;
-    box-shadow: var(--subscribe-btn);
-    border: none;
-    border-radius: 4px;
-    @include font(var(--main-font), 16px, 700, calc(30 / 16), 0.06em, var(--secondary-accent-clr));
-    text-align: center;
-    @include transition(background-color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
-  }
-  &__btn:hover,
-  &__btn:focus {
-    background-color: var(--btn-accent-bg-cl);
-  }
+}
+.hero__overlay {
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/about_the_studio/hero-bckg.jpg'), url(../images/about_the_studio/hero-bckg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

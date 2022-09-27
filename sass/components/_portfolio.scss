@@ -1,8 +1,5 @@
 .portfolio {
   background-color: var(--secondary-accent-clr);
-  &__title {
-    @extend %visually-hidden;
-  }
 }
 
 .filtr {
@@ -13,25 +10,6 @@
 .filtr__item {
   &:not(:last-child) {
     margin-right: 8px;
-  }
-}
-
-.filtr__btn {
-  padding: 6px 25px;
-  min-width: 73px;
-  max-height: 38px;
-  background-color: var(--accent-bgd-clr);
-  border: none;
-  border-radius: 4px;
-
-  @include font(inherit, 16px, 500, calc(26 / 16), 0.03em, var(--main-clr));
-  @include transition(color, background-color, box-shadow, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    color: var(--secondary-accent-clr);
-    background-color: var(--accent-clr);
-    box-shadow: var(--portfolio-filtr-hover);
   }
 }
 

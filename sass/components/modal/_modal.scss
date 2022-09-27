@@ -7,7 +7,7 @@
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
 
-  @include transition(opacity, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+  @include transition(opacity, visibility, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 }
 
 .backdrop.is-hidden {
