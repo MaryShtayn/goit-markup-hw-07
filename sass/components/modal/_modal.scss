@@ -44,7 +44,7 @@
   background-color: var(--secondary-accent-clr);
   border-radius: 50%;
   cursor: pointer;
-  @include transition(fill, null, null, 250ms cubic-bezier(0.4, 0, 0.2, 1));
+  @include transition(fill, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 
   &:hover,
   &:focus {
