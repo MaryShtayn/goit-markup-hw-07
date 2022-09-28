@@ -97,7 +97,7 @@ section {
   --secondary-font: Raleway;
 }
 
-.address__link, .cards__link {
+.cards__link, .address__link {
   text-decoration: none;
 }
 
@@ -142,9 +142,6 @@ section {
   display: block;
   padding: 32px 0;
   color: inherit;
-}
-.main-nav__link--current {
-  color: var(--accent-clr);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -152,7 +149,10 @@ section {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.main-nav__link--current:hover, .main-nav__link--current:focus {
+.main-nav__link:hover, .main-nav__link:focus {
+  color: var(--accent-clr);
+}
+.main-nav__link--current {
   color: var(--accent-clr);
 }
 .main-nav__link--current::after {
@@ -165,6 +165,37 @@ section {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-clr);
+}
+
+.logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1923076923;
+  letter-spacing: 0.03em;
+  color: var(--main-clr);
+}
+
+.logo__web--blue {
+  color: var(--accent-clr);
+}
+
+.logo__footer {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1923076923;
+  letter-spacing: 0.03em;
+  color: var(--secondary-accent-clr);
 }
 
 .contacts {
@@ -212,35 +243,38 @@ section {
   color: var(--accent-clr);
 }
 
-.logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  text-decoration: none;
-  font-family: var(--secondary-font);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.1923076923;
-  letter-spacing: 0.03em;
-  color: var(--main-clr);
+.contacts__footer {
+  margin-right: 70px;
 }
 
-.logo__web--blue {
-  color: var(--accent-clr);
-}
-
-.logo__footer {
-  display: block;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
-  font-family: var(--secondary-font);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.1923076923;
+.address {
+  font-style: normal;
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--secondary-accent-clr);
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__link {
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--contacts-link-clr);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address__link:hover, .address__link:focus {
+  color: var(--accent-clr);
 }
 
 .hero__btn {
@@ -852,40 +886,6 @@ section {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-}
-
-.footer__contacts {
-  margin-right: 70px;
-}
-
-.address {
-  font-style: normal;
-  font-family: var(--main-font);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: var(--secondary-accent-clr);
-}
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-.address__link {
-  font-family: var(--main-font);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: var(--contacts-link-clr);
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address__link:hover, .address__link:focus {
-  color: var(--accent-clr);
 }
 
 .footer__socials-title {
