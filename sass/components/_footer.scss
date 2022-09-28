@@ -8,27 +8,6 @@
   display: flex;
   align-items: baseline;
 }
-.footer__contacts {
-  margin-right: 70px;
-}
-
-.address {
-  font-style: normal;
-  @include font(var(--main-font), 14px, 400, 1.7, 0.03em, var(--secondary-accent-clr));
-
-  &__item:not(:last-child) {
-    margin-bottom: 9px;
-  }
-  &__link {
-    @extend %link;
-    @include font(var(--main-font), 14px, 400, 1.7, 0.03em, var(--contacts-link-clr));
-    @include transition(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
-  }
-  &__link:hover,
-  &__link:focus {
-    color: var(--accent-clr);
-  }
-}
 
 .footer__socials-title {
   display: block;
